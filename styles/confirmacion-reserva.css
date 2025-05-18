@@ -1,0 +1,121 @@
+.confirmation-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .confirmation-header {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .confirmation-header h1 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .restaurante-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .restaurante-image {
+    width: 120px;
+    height: 90px;
+    margin-right: 1.5rem;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  
+  .restaurante-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .restaurante-name {
+    flex-grow: 1;
+  }
+  
+  .reservation-details {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+  
+  .detail-item {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .detail-item i {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    color: #e63946;
+  }
+  
+  .notice-box {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .notice-box h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .restaurante-note {
+    margin-bottom: 2rem;
+  }
+  
+  .btn-container {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .btn-confirm {
+    background-color: #e63946;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-confirm:hover {
+    background-color: #d62839;
+  }
+  
+  .countdown {
+    background-color: #e6f7ff;
+    padding: 0.8rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  .user-info {
+    margin-bottom: 2rem;
+  }
+  
+  .terms {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 2rem;
+  }

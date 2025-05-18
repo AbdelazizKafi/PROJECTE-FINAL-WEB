@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="stylesheet" href="/styles/styles-restaurants.css" />
+    <link rel="stylesheet" href="/styles/confirmacion-reserva.css" />    
+    <link rel="icon" href="/assets/DineTime-Log.png"/>
+    <title>Confirmación de Reserva - DineTime</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <div class="nav__bar">
+          <div class="logo">
+            <a href="index.html"><img src="/assets/DineTime-Log.png" alt="logo" /></a>
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+        
+        <div id="auth-controls">
+          <a href="ajustes.html" id="user-icon" style="display: none;">
+            <i class="ri-user-3-fill" style="font-size: 24px; color: white;"></i>
+          </a>
+        </div>
+      </nav>
+    </header>
+    
+    <div class="overlay" id="overlay">
+      <div class="login__box">
+        <span class="close-btn" id="close-login">&times;</span>
+        <h2>Iniciar Sesión</h2>
+        <form id="login-form">
+          <div class="#">
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="#">
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          <button type="submit" class="btn">Ingresar</button>
+        </form>
+        <p>¿No tienes una cuenta? <a href="register.html">Regístrate aquí</a></p>
+      </div>
+    </div>
+
+    <div class="section__container">
+      <div class="confirmation-container">
+        <div class="confirmation-header">
+          <h1>¡Ya casi has terminado!</h1>
+        </div>
+        
+        <div class="restaurante-info">
+          <div class="restaurante-image">
+            <img id="restaurante-img" src="" alt="">
+          </div>
+          <div class="restaurante-name">
+            <h2 id="restaurante-name"></h2>
+            <div>
+              <i class="ri-calendar-line"></i> <span id="reservation-date">22 abr</span>
+              <i class="ri-time-line" style="margin-left: 1rem;"></i> <span id="reservation-time">19:00</span>
+            </div>
+            <div>
+              <i class="ri-group-line"></i> <span id="reservation-people">2 personas (Asiento estándar)</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="countdown">
+          Te guardaremos esta mesa <span id="countdown-timer">5:00 minutos</span>
+        </div>
+        
+        <div class="user-info">
+          <h3>Datos para la reserva</h3>
+          <div style="margin-top: 1rem;">
+            <label for="user-name">Nombre completo</label>
+            <input type="text" id="user-name" style="width: 100%; padding: 0.5rem; margin-top: 0.25rem;" placeholder="Tu nombre">
+          </div>
+          
+          <div style="margin-top: 1rem; display: flex; gap: 1rem;">
+            <div style="flex: 1;">
+              <label for="user-phone">Teléfono</label>
+              <div style="display: flex; align-items: center;">
+                <select style="padding: 0.5rem; margin-top: 0.25rem;">
+                  <option value="es">🇪🇸 +34</option>
+                </select>
+                <input type="tel" id="user-phone" style="flex: 1; padding: 0.5rem; margin-top: 0.25rem;" placeholder="612345678">
+              </div>
+            </div>
+            <div style="flex: 1;">
+              <label for="user-email">Email</label>
+              <input type="email" id="user-email" style="width: 100%; padding: 0.5rem; margin-top: 0.25rem;" placeholder="tu@email.com">
+            </div>
+          </div>
+          
+          <div style="margin-top: 1rem;">
+            <label for="special-request">Petición especial (opcional)</label>
+            <textarea id="special-request" style="width: 100%; padding: 0.5rem; margin-top: 0.25rem; height: 80px;" placeholder="Añade una petición especial"></textarea>
+          </div>
+          
+          <div style="margin-top: 1rem;">
+            <input type="checkbox" id="newsletter">
+            <label for="newsletter">Quiero registrarme para recibir ofertas y noticias de este restaurante por correo electrónico.</label>
+          </div>
+        </div>
+        
+        <div class="notice-box">
+          <h3>Qué debes saber antes de ir</h3>
+          <h4>Información importante para comensales</h4>
+          <p>Disponemos de un período de gracia de 15 minutos. Llámanos si llegarás más de 15 minutos después de la hora de la reserva.</p>
+          
+          <div class="restaurante-note">
+            <h4>Nota</h4>
+            <p>Todos los restaurantes con los que trabajamos operan siguiendo estrictamente las normas de seguridad e higiene. Nuestros equipos trabajan con las máximas medidas sanitarias para garantizar su bienestar. Ante cualquier necesidad especial o alergia alimentaria, por favor indíquelo en su reserva.</p>
+          </div>
+        </div>
+        
+        <div class="btn-container">
+          <button class="btn-confirm">Completa tu reserva</button>
+        </div>
+        
+        <div class="terms">
+          <p>Al hacer clic en «Completa tu reserva», aceptas los <a href="#">Términos de uso</a> y la <a href="#">Política de privacidad</a> de DineTime. Pueden aplicarse tarifas de mensajes y datos. Si no quieres recibir mensajes de marketing, puedes darte de baja en cualquier momento.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <div class="logo">
+            <a href="index.html#home"><img src="/assets/DineTime-Log.png" alt="logo" /></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>ACCESO RÁPIDO</h4>
+          <ul class="footer__links">
+            <li><a href="#">Explorar restaurantes</a></li>
+            <li><a href="#">Opiniones de usuarios</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>NUESTROS SERVICIOS</h4>
+          <ul class="footer__links">
+            <li><a href="#">Reservas online</a></li>
+            <li><a href="#">Opciones flexibles</a></li>
+            <li><a href="#">Menús especiales</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>CONTACTO</h4>
+          <ul class="footer__links">
+            <li><a href="mailto:dinetimeticbcn@gmail.com">dinetimeticbcn@gmail.com</a></li>
+          </ul>
+          
+          <div class="footer__socials">
+            <a href="https://www.instagram.com/dinetimetic/" target="_blank" rel="noopener noreferrer">
+              <span><i class="ri-instagram-line"></i></span>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <span><i class="ri-twitter-x-line"></i></span>
+            </a>       
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <span><i class="ri-tiktok-line"></i></span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bar">
+        Copyright © 2025 DineTime. Todos los derechos reservados.
+      </div>
+    </footer>
+    <script src="/code/confirmacion-reserva.js"></script>
+  </body>
+</html>

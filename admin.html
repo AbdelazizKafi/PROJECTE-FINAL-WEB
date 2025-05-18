@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/styles.css"/>
+    <link rel="stylesheet" href="/styles/styles-ajustes.css"/>
+    <link rel="stylesheet" href="/styles/admin.css"/>
+    <link rel="icon" href="/assets/DineTime-Log.png"/>
+    <title>Panel de Administrador - DineTime</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <div class="nav__bar">
+          <div class="logo">
+            <a href="index.html"><img src="/assets/DineTime-Log.png" alt="logo" /></a>
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="index.html#home">Inicio</a></li>
+          <li><a href="index.html#about">Sobre nosotros</a></li>
+          <li><a href="index.html#service">Servicios</a></li>
+          <li><a href="index.html#explore">Explorar</a></li>
+          <li><a href="index.html#contact">Contacto</a></li>
+        </ul>
+        <div id="auth-controls">
+          <a href="admin-panel.html" id="user-icon">
+            <i class="ri-admin-fill" style="font-size: 24px; color: white;"></i>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="section__container user-profile-container">
+      <div class="sidebar">
+        <div class="user-card">
+          <div class="user-avatar" style="background-color: #2b8a3e;">
+            AD
+          </div>
+          <div class="user-info">
+            <h2>Admin DineTime</h2>
+            <p>Administrador del sistema</p>
+          </div>
+        </div>
+
+        <div class="nav-menu">
+          <a href="#" class="active">Panel Principal</a>
+          <a href="#">Gestión de Reservas</a>
+          <a href="#">Gestión de Restaurantes</a>
+          <a href="#">Gestión de Usuarios</a>
+          <a href="#">Detalles de la Cuenta</a>
+          <a href="index.html">Cerrar Sesión</a>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <div class="section-container" id="dashboard-section">
+          <div class="section-header">
+            <h3 class="section-title">Panel Principal</h3>
+          </div>
+
+          <div class="stats-cards">
+            <div class="stat-card">
+              <h4>Reservas Hoy</h4>
+              <div class="number">42</div>
+              <div class="trend">+12% vs. ayer</div>
+            </div>
+            <div class="stat-card">
+              <h4>Restaurantes Activos</h4>
+              <div class="number">128</div>
+              <div class="trend">+3 esta semana</div>
+            </div>
+            <div class="stat-card">
+              <h4>Usuarios Registrados</h4>
+              <div class="number">3,542</div>
+              <div class="trend">+87 esta semana</div>
+            </div>
+            
+          </div>
+
+          <div class="section-header">
+            <h3 class="section-title">Actividad Reciente</h3>
+          </div>
+
+          <div class="reservation-item">
+            <div>
+              <strong>Reserva #4582</strong> - 4 personas en <strong>La Tapería</strong>
+              <div>17 Abril, 2025 - 20:00h - Cliente: María López</div>
+            </div>
+            <div class="status-badge status-active">Confirmada</div>
+          </div>
+
+          <div class="reservation-item">
+            <div>
+              <strong>Reserva #4581</strong> - 2 personas en <strong>Sushi Mako</strong>
+              <div>17 Abril, 2025 - 18:30h - Cliente: Carlos Ruiz</div>
+            </div>
+            <div class="status-badge status-active">Confirmada</div>
+          </div>
+
+          <div class="restaurant-item">
+            <div>
+              <strong>Greek Gyros</strong> - Restaurante italiano
+              <div>Solicitud de alta - 30 Abril, 2025</div>
+            </div>
+            <div class="status-badge status-pending">Pendiente</div>
+          </div>
+
+          <div class="user-item">
+            <div>
+              <strong>Juan Pérez</strong> - juanperez@email.com
+              <div>Registro nuevo - 28 Abril, 2025</div>
+            </div>
+            <div class="status-badge status-active">Activo</div>
+          </div>
+        </div>
+
+        <div class="section-container" id="reservas-section" style="display: none;">
+          <div class="section-header">
+            <h3 class="section-title">Gestión de Reservas</h3>
+          </div>
+
+          <div class="search-tools">
+            <input type="date" value="2025-04-17">
+            <select>
+              <option value="">Estado</option>
+              <option value="confirmed">Confirmadas</option>
+              <option value="pending">Pendientes</option>
+              <option value="cancelled">Canceladas</option>
+            </select>
+            <input type="text" placeholder="Buscar por cliente o restaurante">
+            <button>Buscar</button>
+          </div>
+
+          <div class="reservation-item">
+            <div>
+              <strong>Reserva #4582</strong> - 4 personas en <strong>La Tapería</strong>
+              <div>27 Mayo, 2025 - 12:30h - Cliente: María López</div>
+            </div>
+            <div class="admin-actions">
+              <button class="btn-admin btn-view">Ver detalles</button>
+              <button class="btn-admin btn-edit">Editar</button>
+              <button class="btn-admin btn-delete">Cancelar</button>
+            </div>
+          </div>
+
+          <div class="reservation-item">
+            <div>
+              <strong>Reserva #4581</strong> - 2 personas en <strong>Sushi Mako</strong>
+              <div>17 Abril, 2025 - 20:30h - Cliente: Carlos Ruiz</div>
+            </div>
+            <div class="admin-actions">
+              <button class="btn-admin btn-view">Ver detalles</button>
+              <button class="btn-admin btn-edit">Editar</button>
+              <button class="btn-admin btn-delete">Cancelar</button>
+            </div>
+          </div>
+
+          <div class="reservation-item">
+            <div>
+              <strong>Reserva #4580</strong> - 6 personas en <strong>Sauvage Barcelons</strong>
+              <div>11 Mayo, 2025 - 21:30h - Cliente: Ana Martínez</div>
+            </div>
+            <div class="admin-actions">
+              <button class="btn-admin btn-view">Ver detalles</button>
+              <button class="btn-admin btn-edit">Editar</button>
+              <button class="btn-admin btn-delete">Cancelar</button>
+            </div>
+          </div>
+
+          <div class="reservation-item">
+            <div>
+              <strong>Reserva #4579</strong> - 2 personas en <strong>Pizzeria Molto Buono</strong>
+              <div>3 Junio, 2025 - 14:00h - Cliente: Cristiano Ronaldo</div>
+            </div>
+            <div class="admin-actions">
+              <button class="btn-admin btn-view">Ver detalles</button>
+              <button class="btn-admin btn-edit">Editar</button>
+              <button class="btn-admin btn-delete">Cancelar</button>
+            </div>
+          </div>
+
+          <div class="reservation-item">
+            <div>
+              <strong>Reserva #4578</strong> - 3 personas en <strong>Thai Garden</strong>
+              <div>12 Mayo, 2025 - 22:00h - Cliente: Laura Gómez</div>
+            </div>
+            <div class="admin-actions">
+              <button class="btn-admin btn-view">Ver detalles</button>
+              <button class="btn-admin btn-edit">Editar</button>
+              <button class="btn-admin btn-delete">Cancelar</button>
+            </div>
+          </div>
+
+          <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">&raquo;</a>
+          </div>
+        </div>
+
+        <div class="section-container" id="restaurantes-section" style="display: none;">
+          <div class="section-header">
+            <h3 class="section-title">Gestión de Restaurantes</h3>
+          </div>
+
+          <div class="search-tools">
+            <select>
+              <option value="">Estado</option>
+              <option value="active">Activo</option>
+              <option value="pending">Pendiente</option>
+              <option value="inactive">Inactivo</option>
+            </select>
+            <select>
+              <option value="">Categoría</option>
+              <option value="italian">Italiano</option>
+              <option value="japanese">Japonés</option>
+              <option value="spanish">Español</option>
+              <option value="indian">Indio</option>
+              <option value="mexican">Mexicano</option>
+            </select>
+            <input type="text" placeholder="Buscar restaurante">
+            <button>Buscar</button>
+          </div>
+
+          <div class="restaurant-item">
+            <div>
+              <strong>La Tapería</strong> - Restaurante español
+              <div>Barcelona - Miembro desde: Enero 2025</div>
+            </div>
+            <div class="admin-actions">
+              <button class="btn-admin btn-view">Ver detalles</button>
+              <button class="btn-admin btn-edit">Editar</button>
+              <button class="btn-admin btn-delete">Desactivar</button>
+            </div>
+          </div>
+
+          <div class="restaurant-item">
+            <div>
+              <strong>Sushi Mako</strong> - Restaurante japonés
+              <div>Barcelona - Miembro desde: Diciembre 2024</div>
+            </div>
+            <div class="admin-actions">
+              <button class="btn-admin btn-view">Ver detalles</button>
+              <button class="btn-admin btn-edit">Editar</button>
+              <button class="btn-admin btn-delete">Desactivar</button>
+            </div>
+          </div>
+
+          <div class="restaurant-item">
+            <div>
+              <strong>Pizzeria Molto Buono</strong> - Restaurante italiano
+              <div>Barcelona - Miembro desde: Febrero 2025</div>
+            </div>
+            <div class="admin-actions">
+              <button class="btn-admin btn-view">Ver detalles</button>
+              <button class="btn-admin btn-edit">Editar</button>
+              <button class="btn-admin btn-delete">Desactivar</button>
+            </div>
+          </div>
+
+          <div class="restaurant-item">
+            <div>
+              <strong>Greek Gyros</strong> - Restaurante griego
+              <div>Barcelona - Solicitud: 30 Abril, 2025</div>
+            </div>
+            <div class="admin-actions">
+              <button class="btn-admin btn-view">Ver detalles</button>
+              <button class="btn-admin btn-approve">Aprobar</button>
+              <button class="btn-admin btn-delete">Rechazar</button>
+            </div>
+          </div>
+
+          <div class="restaurant-item">
+            <div>
+              <strong>Thai Garden</strong> - Restaurante tailandés
+              <div>Barcelona - Miembro desde: Marzo 2025</div>
+            </div>
+            <div class="admin-actions">
+              <button class="btn-admin btn-view">Ver detalles</button>
+              <button class="btn-admin btn-edit">Editar</button>
+              <button class="btn-admin btn-delete">Desactivar</button>
+            </div>
+          </div>
+
+          <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">&raquo;</a>
+          </div>
+        </div>
+
+        <div class="section-container" id="usuarios-section" style="display: none;">
+          <div class="section-header">
+            <h3 class="section-title">Gestión de Usuarios</h3>
+          </div>
+
+          <div class="search-tools">
+            <select>
+              <option value="">Estado</option>
+              <option value="active">Activo</option>
+              <option value="inactive">Inactivo</option>
+            </select>
+            <input type="date" placeholder="Fecha de registro">
+            <input type="text" placeholder="Buscar usuario">
+            <button>Buscar</button>
+          </div>
+
+          <div class="user-item">
+            <div>
+              <strong>María López</strong> - maria.lopez@email.com
+              <div>Barcelona - Registro: Febrero 2025 - Reservas: 8</div>
+            </div>
+            <div class="admin-actions">
+              <button class="btn-admin btn-view">Ver detalles</button>
+              <button class="btn-admin btn-edit">Editar</button>
+              <button class="btn-admin btn-delete">Desactivar</button>
+            </div>
+          </div>
+
+          <div class="user-item">
+            <div>
+              <strong>Carlos Ruiz</strong> - carlos.ruiz@email.com
+              <div>Madrid - Registro: Enero 2025 - Reservas: 12</div>
+            </div>
+            <div class="admin-actions">
+              <button class="btn-admin btn-view">Ver detalles</button>
+              <button class="btn-admin btn-edit">Editar</button>
+              <button class="btn-admin btn-delete">Desactivar</button>
+            </div>
+          </div>
+
+          <div class="user-item">
+            <div>
+              <strong>Ana Martínez</strong> - ana.martinez@email.com
+              <div>Barcelona - Registro: Marzo 2025 - Reservas: 3</div>
+            </div>
+            <div class="admin-actions">
+              <button class="btn-admin btn-view">Ver detalles</button>
+              <button class="btn-admin btn-edit">Editar</button>
+              <button class="btn-admin btn-delete">Desactivar</button>
+            </div>
+          </div>
+
+          <div class="user-item">
+            <div>
+              <strong>Cristiano Ronaldo</strong> - CR7@email.com
+              <div>Valencia - Registro: Abril 2025 - Reservas: 1</div>
+            </div>
+            <div class="admin-actions">
+              <button class="btn-admin btn-view">Ver detalles</button>
+              <button class="btn-admin btn-edit">Editar</button>
+              <button class="btn-admin btn-delete">Desactivar</button>
+            </div>
+          </div>
+
+          <div class="user-item">
+            <div>
+              <strong>Laura Gómez</strong> - laura.gomez@email.com
+              <div>Barcelona - Registro: Diciembre 2024 - Reservas: 15</div>
+            </div>
+            <div class="admin-actions">
+              <button class="btn-admin btn-view">Ver detalles</button>
+              <button class="btn-admin btn-edit">Editar</button>
+              <button class="btn-admin btn-delete">Desactivar</button>
+            </div>
+          </div>
+
+          <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">&raquo;</a>
+          </div>
+        </div>
+
+        <div class="section-container" id="cuenta-section" style="display: none;">
+          <div class="section-header">
+            <h3 class="section-title">Detalles de la Cuenta</h3>
+          </div>
+
+          <form class="account-form">
+            <div class="form-group">
+              <label for="firstName">Nombre</label>
+              <input type="text" id="firstName" value="Admin">
+            </div>
+            <div class="form-group">
+              <label for="lastName">Apellido</label>
+              <input type="text" id="lastName" value="DineTime">
+            </div>
+            <div class="form-group">
+              <label for="email">Correo electrónico</label>
+              <input type="email" id="email" value="admin@dinetime.com">
+            </div>
+            <div class="form-group">
+              <label for="phone">Teléfono</label>
+              <input type="tel" id="phone" value="+34 600 123 456">
+            </div>
+            <div class="form-group">
+              <label for="role">Rol</label>
+              <select id="role" disabled>
+                <option value="admin" selected>Administrador</option>
+                <option value="manager">Gestor</option>
+                <option value="support">Soporte</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="oldPassword">Contraseña actual</label>
+              <input type="password" id="oldPassword" placeholder="Introduce tu contraseña actual">
+            </div>
+            <div class="form-group">
+              <label for="newPassword">Nueva contraseña</label>
+              <input type="password" id="newPassword" placeholder="Introduce tu nueva contraseña">
+            </div>
+            <div class="form-group">
+              <label for="confirmPassword">Confirmar contraseña</label>
+              <input type="password" id="confirmPassword" placeholder="Confirma tu nueva contraseña">
+            </div>
+            <div class="form-group-full">
+              <button type="submit" class="btn-save">Guardar cambios</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <div class="logo">
+            <a href="index.html#home"><img src="/assets/DineTime-Log.png" alt="logo" /></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>ACCESO RÁPIDO</h4>
+          <ul class="footer__links">
+            <li><a href="#">Explorar restaurantes</a></li>
+            <li><a href="#">Opiniones de usuarios</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>NUESTROS SERVICIOS</h4>
+          <ul class="footer__links">
+            <li><a href="#">Reservas online</a></li>
+            <li><a href="#">Opciones flexibles</a></li>
+            <li><a href="#">Menús especiales</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>CONTACTO</h4>
+          <ul class="footer__links">
+            <li><a href="mailto:dinetimeticbcn@gmail.com">dinetimeticbcn@gmail.com</a></li>
+          </ul>
+          
+          <div class="footer__socials">
+            <a href="https://www.instagram.com/dinetimetic/" target="_blank" rel="noopener noreferrer">
+              <span><i class="ri-instagram-line"></i></span>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <span><i class="ri-twitter-x-line"></i></span>
+            </a>       
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <span><i class="ri-tiktok-line"></i></span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bar">
+        Copyright © 2025 DineTime. Todos los derechos reservados.
+      </div>
+    </footer>
+    <script src="/code/admin.js"></script>
+  </body>
+</html>
